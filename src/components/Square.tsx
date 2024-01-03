@@ -1,4 +1,4 @@
-function Square({value}){
+function Square({ value }){
   return(
     <button className="square">{value}</button>
   );
