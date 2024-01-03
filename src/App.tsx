@@ -1,4 +1,4 @@
-function Square() {
+function Board() {
 
   return (
     <>
@@ -22,4 +22,4 @@ function Square() {
   
 }
 
-export default Square;
+export default Board;
