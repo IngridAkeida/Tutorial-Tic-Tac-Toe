@@ -6,14 +6,18 @@ function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
-    const nextSquare = squares.slice();
+    if (squares[i]) {
+      return; 
+    }
+
+    const nextSquares = squares.slice();
 
     if (xIsNext) {
-      nextSquare[i] = "X";
+      nextSquares[i] = "X";
     } else {
-      nextSquare[i] = "O";
+      nextSquares[i] = "O";
     }
-    setSquares(nextSquare);
+    setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
 
