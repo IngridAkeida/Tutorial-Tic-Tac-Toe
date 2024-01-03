@@ -19,7 +19,7 @@ function Game() {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((squares, move) => {
+  const moves = history.map((square, move) => {
     let description;
     if (move > 0) {
       description = `Go to move #${move}`;
@@ -35,7 +35,9 @@ function Game() {
 
   return(
     <>
-      <div className="title"><h1>Tic Tac Toe</h1></div>
+      <div className="title">
+        <h1>Tic Tac Toe</h1>
+      </div>
       <div className="game">
         <div className="game-board">
           <Board 
